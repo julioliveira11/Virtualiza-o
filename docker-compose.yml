@@ -1,0 +1,21 @@
+version: "3.3"
+services:
+  service1:
+    image: alpine
+    ports: 
+      - "8888:9999"
+    volumes:
+      - my-volume
+    networks:
+      - my-network
+  service2:
+    image: alpine
+    volumes:
+      - my-volume
+    networks:
+      - my-network
+volumes:
+  my-volume:
+networks:
+  my-network:
+
