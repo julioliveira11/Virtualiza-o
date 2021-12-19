@@ -1,15 +1,15 @@
 version: "3.3"
 services:
   service1:
-    image: alpine
+    image: httpd
     ports: 
       - "8888:9999"
     volumes:
-      - my-volume
+      - my-volume:/usr/local/apache2
     networks:
       - my-network
   service2:
-    image: alpine
+    image: httpd
     volumes:
       - my-volume
     networks:
